@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #183333;
+  --muted: #6c7b79;
+  --paper: #e8f0ed;
+  --panel: #f8fbf9;
+  --line: #e2e9e5;
+  --teal: #0f766e;
+  --teal-dark: #115e59;
+  --mint: #dff3ec;
+  --coral: #e57f62;
+  --shadow: 0 18px 45px rgba(31, 69, 63, 0.08);
+  --sans: "Manrope", "Segoe UI", sans-serif;
+  font: 14px/1.5 var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #e8f0ed;
+}
+
+button, input { font: inherit; }
+

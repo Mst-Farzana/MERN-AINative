@@ -1,0 +1,21 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies and builds
+node_modules/
+dist/
+dist-ssr/
+
+# Runtime files
+uploads/
+logs/
+*.log
+
+# Local tooling
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.local

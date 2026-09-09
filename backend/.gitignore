@@ -1,0 +1,7 @@
+.env
+.env.*
+!.env.example
+dist
+node_modules
+uploads
+*.log

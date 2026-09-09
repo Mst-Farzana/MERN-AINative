@@ -1,0 +1,15 @@
+.app-shell { min-height: 100svh; background: radial-gradient(circle at 78% 0%, rgba(69,148,132,.3), transparent 25rem), radial-gradient(circle at 8% 84%, rgba(229,127,98,.18), transparent 28rem), linear-gradient(135deg, #102f35 0%, #16464a 37%, #e8f0ed 37.2%, #e8f0ed 100%); }
+.app-main { min-width: 0; }
+.page-content { max-width: 1480px; margin: 0 auto; padding: 34px 42px 56px; }
+.eyebrow { color: var(--teal); font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.soft-grid { background-image: linear-gradient(rgba(15,118,110,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(15,118,110,.04) 1px, transparent 1px); background-size: 28px 28px; }
+.booking-drawer { animation: drawer-in .24s ease-out; }
+.booking-chart-line { stroke-dasharray: 760; stroke-dashoffset: 760; animation: chart-draw 1.4s ease-out forwards; }
+.booking-chart-fill { opacity: 0; animation: chart-fade 1s ease-out .35s forwards; }
+.booking-chart-pulse { stroke-dashoffset: 0; animation: chart-pulse 2.4s linear infinite; }
+@keyframes drawer-in { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes chart-draw { to { stroke-dashoffset: 0; } }
+@keyframes chart-fade { to { opacity: 1; } }
+@keyframes chart-pulse { to { stroke-dashoffset: -44; } }
+@media (max-width: 900px) { .page-content { padding: 26px 22px 42px; } }
+@media (max-width: 640px) { .page-content { padding: 22px 16px 34px; } }
