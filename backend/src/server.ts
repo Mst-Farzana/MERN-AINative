@@ -16,11 +16,25 @@ import productRoutes from './routes/products.js';
 
 const app = express();
 
+const allowedOrigins = [
+  ...(env.CLIENT_URL?.split(',')
+    .map(origin => origin.trim())
+    .filter(Boolean) || []),
+  'https://mern-ai-native.vercel.app',
+];
+
 // Middleware
 app.use(helmet());
 app.use(
   cors({
-    origin: env.CLIENT_URL?.split(',') || ['http://localhost:5173'],
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+        return;
+      }
+
+      callback(new Error(`CORS origin is not allowed: ${origin}`));
+    },
     credentials: true,
   })
 );
